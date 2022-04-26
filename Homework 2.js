@@ -60,3 +60,48 @@ function sumRepeator(n){
     return n
 }
 
+
+// 5. Write a recursive function which receives  a number as arguments and returns the
+// fibonacci sequence as array.
+
+// function fibonachi(n){
+//     let arr = []
+//     if (n === 1){
+//         arr.push(n)
+//         return arr
+//     } 
+//     if (n === 2 ){
+//         arr.push(fib(n-1))
+//         arr.push(fib(n))
+//         return arr 
+//     }
+//     if (n === 3){
+//         arr.push(fib(n-2))
+//         arr.push(fib(n-1))
+//         arr.push(fib(n))
+//         return arr 
+//     }
+//     if (n === 4){
+//         arr.push(fib(n-3))
+//         arr.push(fib(n-2))
+//         arr.push(fib(n-1))
+//         arr.push(fib(n))
+//         return arr
+//     }
+// }
+
+function fib (n){
+    if (n === 1 || n === 2){
+        return 1
+    }
+    return fib(n-1)+ fib(n-2)
+}
+
+function fibonachi (n){
+    let arr = []
+    for(let i = 0; i < n; i++ ){
+        arr.unshift(fib(n-i))
+    }
+    return arr
+}
+
