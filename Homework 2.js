@@ -34,11 +34,10 @@ function onlyOdd (arr){
             result.push(arr[i])  
         }
     }
-    let filtered = result
-    filtered.map(function (el){
+    result = result.map(function (el){
         return el * 3
     })
-    return filtered
+    return result
 }
 
 // 4. Given a number. Write a function that calculates its sum of the digits and if that sum
