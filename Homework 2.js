@@ -44,7 +44,8 @@ function onlyOdd (arr){
 // has more than 1 digit find the sum of digits of that number. Repeat that process if needed and
 // return the result.
 
-function sumRepeator(n){ 
+function sumRepeator(n){
+    n = String(n)
     let result = 0 
     for (let i = 0;i < n.length;i++){
             result = Number(n[i]) + Number(result)
